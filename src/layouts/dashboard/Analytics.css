@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px){
+    #quick_action_and_lifetime_sales {
+        flex-direction: column-reverse;
+    }
+}
+/* #quick_action_and_lifetime_sales {
+    display: flex;
+    align-items: stretch !important;
+} */
+

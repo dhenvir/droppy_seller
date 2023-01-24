@@ -1,0 +1,6 @@
+.inputerrormsg{
+    font-size: 10px !important;
+    padding: 3px;
+    color: red !important;
+    /* display: none; */
+}
