@@ -16,20 +16,16 @@ Coded by www.creative-tim.com
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
-import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 PRO React TS components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 
 //custom components
 import PlusMinusBtn from "layouts/products/components/PlusMinusBtn";
 
 //imports utils
 import { pesoFormat } from "utils/Utils";
-import { Hidden } from "@mui/material";
 
 // Declaring props types for BookingCard
 interface Props {
@@ -77,63 +73,49 @@ function ProductCards({
           }}
         />
       </MDBox>
-      <MDBox display="flex" justifyContent="space-between" flexDirection="column" height="10rem">
-        <MDBox textAlign="center" pt={1} px={1}>
-          <MDTypography variant="h6" fontWeight="medium">
-            {title}
-          </MDTypography>
-          <MDTypography color="text" sx={{ fontSize: 11 }}>
-            {supplier}
-          </MDTypography>
+      {addingproduct ? (
+        <MDBox display="flex" justifyContent="space-between" flexDirection="column" height="10rem">
+          <MDBox textAlign="center" pt={1} px={1}>
+            <MDTypography variant="h6" fontWeight="medium">
+              {title}
+            </MDTypography>
+            <MDTypography color="text" sx={{ fontSize: 11 }}>
+              {supplier}
+            </MDTypography>
+          </MDBox>
+          <MDBox textAlign="center" pt={1} px={1}>
+            <MDTypography color="text" sx={{ fontSize: 12 }}>
+              My stock: {inventorystock}
+            </MDTypography>
+            <MDTypography color="text" sx={{ fontSize: 12 }}>
+              Main stock: {allstock}
+            </MDTypography>
+          </MDBox>
+          <MDBox display="flex" px={2} pb={2}>
+            <PlusMinusBtn max={allstock} value={inputvalue} pkey={pkey} steps={steps ? steps : 1} />
+          </MDBox>
         </MDBox>
-        {addingproduct ? (
-          <>
-            <Grid container textAlign="center" pt={1} px={1} display={{ md: "block", xs: "none" }}>
-              <MDTypography color="text" sx={{ fontSize: 12 }}>
-                My stock: {inventorystock}
-              </MDTypography>
-              <MDTypography color="text" sx={{ fontSize: 12 }}>
-                Main stock: {allstock}
-              </MDTypography>
-            </Grid>
-            <Grid container alignItems="center" px={1}>
-              <Grid item xs={12} md={9} mb={1}>
-                <PlusMinusBtn
-                  max={allstock}
-                  value={inputvalue}
-                  pkey={pkey}
-                  steps={steps ? steps : 1}
-                />
-              </Grid>
-              <Grid item xs={12} md={3} mb={1} justifyContent="center">
-                <MDButton variant="gradient" color="info" fullWidth>
-                  <Grid display={{ md: "flex", xs: "none" }}>
-                    <Icon>redeem</Icon>
-                  </Grid>
-                  <Grid display={{ md: "none", xs: "flex" }}>
-                    <MDTypography color="white" sx={{ fontSize: 14 }} p={0}>
-                      Add to Package
-                    </MDTypography>
-                  </Grid>
-                </MDButton>
-              </Grid>
-            </Grid>
-          </>
-        ) : (
-          <>
-            {/**/}
-            <Divider />
-            <MDBox display="flex" justifyContent="space-between" alignItems="center" pb={2} px={3}>
-              <MDTypography variant="body2" fontWeight="regular" color="text">
-                {pesoFormat(price)}
-              </MDTypography>
-              <MDTypography variant="button" fontWeight="light" color="text">
-                stocks: {inventory ? inventorystock : allstock}
-              </MDTypography>
-            </MDBox>
-          </>
-        )}
-      </MDBox>
+      ) : (
+        <MDBox display="flex" justifyContent="space-between" flexDirection="column" height="10rem">
+          <MDBox textAlign="center" pt={1} px={1}>
+            <MDTypography variant="h6" fontWeight="medium">
+              {title}
+            </MDTypography>
+            <MDTypography color="text" sx={{ fontSize: 11 }}>
+              {supplier}
+            </MDTypography>
+          </MDBox>
+          <Divider />
+          <MDBox display="flex" justifyContent="space-between" alignItems="center" pb={2} px={3}>
+            <MDTypography variant="body2" fontWeight="regular" color="text">
+              {pesoFormat(price)}
+            </MDTypography>
+            <MDTypography variant="button" fontWeight="light" color="text">
+              stocks: {inventory ? inventorystock : allstock}
+            </MDTypography>
+          </MDBox>
+        </MDBox>
+      )}
     </Card>
   );
 }
