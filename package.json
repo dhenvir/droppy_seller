@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dhenvir.github.io/droppy_seller/tree/droppy_2023",
   "name": "material-dashboard-2-pro-react-ts",
   "version": "1.0.0",
   "private": true,
@@ -31,6 +32,7 @@
     "dropzone": "5.9.3",
     "flatpickr": "4.6.13",
     "formik": "2.2.9",
+    "gh-pages": "^5.0.0",
     "html-react-parser": "3.0.1",
     "lottie-react": "^2.3.1",
     "react": ">=16.8.0",
@@ -56,6 +58,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build --legacy-peer-deps",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

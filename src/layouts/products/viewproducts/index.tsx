@@ -61,7 +61,7 @@ function AddProduct(): JSX.Element {
       <DashboardNavbar />
       <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} />
       <MDBox py={3}>
-        <Card sx={{ p: 1 }}>
+        <MDBox p={1}>
           <Grid container justifyContent="space-between">
             <Grid item xs={12} md={6} lg={3} pt={1} px={2}>
               <MDBox>
@@ -92,7 +92,7 @@ function AddProduct(): JSX.Element {
           <MDBox minHeight="69vh" p={1}>
             <ProductList inventory={view} searchname={search} data={AllData} />
           </MDBox>
-        </Card>
+        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

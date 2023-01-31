@@ -77,7 +77,7 @@ function AddProduct(): JSX.Element {
       <DashboardNavbar />
       <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} />
       <MDBox py={3}>
-        <Card sx={{ minHeight: "72vh" }}>
+        <MDBox sx={{ minHeight: "72vh" }}>
           {getStepContent(activeStep)}
           {activeStep === 0 ? (
             <Grid container justifyContent="flex-end" spacing={1} sx={{ px: 2, mb: 2 }}>
@@ -129,7 +129,7 @@ function AddProduct(): JSX.Element {
               </Grid>
             </Grid>
           ) : null}
-        </Card>
+        </MDBox>
       </MDBox>
       <Footer />
       <MDSnackbar
