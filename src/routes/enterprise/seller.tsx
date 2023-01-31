@@ -97,13 +97,13 @@ const routes = [
         component: <AddProduct />,
         icon: <Icon fontSize="medium">dashboard</Icon>,
       },
-      // {
-      //   name: "Withdraw Product",
-      //   key: "withdraw-product",
-      //   route: "/seller/products-list/withdraw-product",
-      //   component: <AddProduct />,
-      //   icon: <Icon fontSize="medium">dashboard</Icon>,
-      // },
+      {
+        name: "Withdraw Product",
+        key: "withdraw-product",
+        route: "/seller/products-list/withdraw-product",
+        component: <AddProduct />,
+        icon: <Icon fontSize="medium">dashboard</Icon>,
+      },
     ],
   },
   {
