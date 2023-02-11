@@ -16,20 +16,16 @@ Coded by www.creative-tim.com
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
-import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 PRO React TS components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 
 //custom components
 import PlusMinusBtn from "layouts/products/components/PlusMinusBtn";
 
 //imports utils
 import { pesoFormat } from "utils/Utils";
-import { Hidden } from "@mui/material";
 
 // Declaring props types for BookingCard
 interface Props {
