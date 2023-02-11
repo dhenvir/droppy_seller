@@ -79,7 +79,7 @@ function ProductCards({
       </MDBox>
       <MDBox display="flex" justifyContent="space-between" flexDirection="column" height="10rem">
         <MDBox textAlign="center" pt={1} px={1}>
-          <MDTypography variant="h6" fontWeight="medium">
+          <MDTypography variant="h6" fontWeight="medium" noWrap>
             {title}
           </MDTypography>
           <MDTypography color="text" sx={{ fontSize: 11 }}>
@@ -96,8 +96,8 @@ function ProductCards({
                 Main stock: {allstock}
               </MDTypography>
             </Grid>
-            <Grid container alignItems="center" px={1}>
-              <Grid item xs={12} md={9} mb={1}>
+            <Grid container alignItems="center" justifyContent="space-between" px={1}>
+              <Grid item xs={12} md={7} mb={1}>
                 <PlusMinusBtn
                   max={allstock}
                   value={inputvalue}
@@ -105,13 +105,13 @@ function ProductCards({
                   steps={steps ? steps : 1}
                 />
               </Grid>
-              <Grid item xs={12} md={3} mb={1} justifyContent="center">
+              <Grid item xs={12} md={4} mb={1} justifyContent="center">
                 <MDButton variant="gradient" color="info" fullWidth>
                   <Grid display={{ md: "flex", xs: "none" }}>
                     <Icon>redeem</Icon>
                   </Grid>
                   <Grid display={{ md: "none", xs: "flex" }}>
-                    <MDTypography color="white" sx={{ fontSize: 14 }} p={0}>
+                    <MDTypography color="white" sx={{ fontSize: 13 }} p={0}>
                       Add to Package
                     </MDTypography>
                   </Grid>

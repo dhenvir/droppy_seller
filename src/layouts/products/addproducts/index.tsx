@@ -18,7 +18,7 @@ import MDBox from "components/MDBox";
 import MDButton from "components/MDButton";
 
 // @mui material components
-import { Grid, Card, Checkbox, Link } from "@mui/material";
+import { Grid, Icon, Badge, Checkbox, Link } from "@mui/material";
 
 // Material Dashboard 2 PRO React TS examples components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -132,6 +132,29 @@ function AddProduct(): JSX.Element {
         </MDBox>
       </MDBox>
       <Footer />
+      <MDBox
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        width="3.25rem"
+        height="3.25rem"
+        bgColor="white"
+        shadow="sm"
+        borderRadius="50%"
+        position="fixed"
+        right="2rem"
+        bottom="2rem"
+        zIndex={99}
+        color="dark"
+        sx={{ cursor: "pointer" }}
+        // onClick={handleConfiguratorOpen}
+      >
+        <Badge color="secondary" badgeContent={0} showZero overlap="circular">
+          <Icon fontSize="small" color="inherit">
+            redeem
+          </Icon>
+        </Badge>
+      </MDBox>
       <MDSnackbar
         color="error"
         icon="warning"
