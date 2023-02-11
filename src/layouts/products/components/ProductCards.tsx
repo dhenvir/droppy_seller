@@ -16,10 +16,12 @@ Coded by www.creative-tim.com
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
+import { Grid, Icon } from "@mui/material";
 
 // Material Dashboard 2 PRO React TS components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import MDButton from "components/MDButton";
 
 //custom components
 import PlusMinusBtn from "layouts/products/components/PlusMinusBtn";
