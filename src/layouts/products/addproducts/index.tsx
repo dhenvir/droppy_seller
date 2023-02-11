@@ -18,7 +18,7 @@ import MDBox from "components/MDBox";
 import MDButton from "components/MDButton";
 
 // @mui material components
-import { Grid, Icon, Badge, Checkbox, Link } from "@mui/material";
+import { Grid, Icon, Badge, Checkbox, Link, Card } from "@mui/material";
 
 // Material Dashboard 2 PRO React TS examples components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
